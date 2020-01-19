@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rightpoint.omdb.R
-import com.example.rightpoint.omdb.shows.Search
+import com.example.rightpoint.omdb.search.models.Search
 import com.example.rightpoint.omdb.shows.Show
 import kotlinx.android.synthetic.main.search_results_view.view.*
 
@@ -43,7 +43,7 @@ open class SearchResultsView @JvmOverloads constructor(
 
 
     fun configureShuffle() {
-        shuffleLayout.setOnClickListener {
+        shuffleAction.setOnClickListener {
             when (currentConfiguration) {
                 VERT -> {
                     currentConfiguration =

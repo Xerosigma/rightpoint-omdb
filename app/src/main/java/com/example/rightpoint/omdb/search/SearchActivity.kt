@@ -8,13 +8,13 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.rightpoint.omdb.OMDBService
 import com.example.rightpoint.omdb.R
 import com.example.rightpoint.omdb.loading.LoadingView
+import com.example.rightpoint.omdb.search.api.OMDBService
 import com.example.rightpoint.omdb.search.api.SearchApi
 import com.example.rightpoint.omdb.search.views.SearchFilterView
 import com.example.rightpoint.omdb.search.views.SearchView
-import com.example.rightpoint.omdb.shows.Search
+import com.example.rightpoint.omdb.search.models.Search
 import com.example.rightpoint.omdb.shows.ShowListActivity
 
 
