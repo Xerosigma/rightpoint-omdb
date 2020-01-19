@@ -17,8 +17,13 @@
             android:text="@string/search_title"
             android:textColor="@color/colorAccent"
             android:textSize="50sp"
-            android:textStyle="bold">
-            <requestFocus/>
+            android:textStyle="bold"
+            android:focusable="true"
+            android:nextFocusForward="@id/titleField"
+            android:nextFocusDown="@id/titleField"
+            android:nextFocusRight="@id/titleField"
+            android:nextFocusUp="@id/executeSearchAction"
+            >
         </TextView>
 
         <EditText
@@ -31,7 +36,12 @@
             android:backgroundTint="@color/colorAccent"
             android:textColorHighlight="@color/colorAccent"
             android:textColor="@color/textColorDark"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:nextFocusForward="@id/executeSearchAction"
+            android:nextFocusDown="@id/executeSearchAction"
+            android:nextFocusRight="@id/executeSearchAction"
+            android:nextFocusUp="@id/fullscreen_content"
+            />
 
         <Button
             android:id="@+id/executeSearchAction"
@@ -39,7 +49,12 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:text="@string/search_action"
-            android:textColor="#ff00ff"/>
+            android:textColor="#ff00ff"
+            android:nextFocusForward="@id/fullscreen_content"
+            android:nextFocusDown="@id/fullscreen_content"
+            android:nextFocusRight="@id/fullscreen_content"
+            android:nextFocusUp="@id/titleField"
+            />
 
     </LinearLayout>
 

@@ -1,7 +1,6 @@
-package com.example.rightpoint.omdb
+package com.example.rightpoint.omdb.search.api
 
-import com.example.rightpoint.omdb.search.api.SearchApi
-import com.example.rightpoint.omdb.shows.Search
+import com.example.rightpoint.omdb.search.models.Search
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -3,6 +3,7 @@ package com.example.rightpoint.omdb.shows
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rightpoint.omdb.R
+import com.example.rightpoint.omdb.search.models.Search
 import com.example.rightpoint.omdb.search.views.SearchResultsView
 
 

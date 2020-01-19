@@ -1,4 +1,6 @@
-# Modules
+# Screens
+- SearchActivity
+- ShowListActivity
 
-Search Activity
-|_ SearchView
+# Services
+- **OMDBService:** listShows()

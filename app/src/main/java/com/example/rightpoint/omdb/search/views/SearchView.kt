@@ -4,6 +4,8 @@ import android.content.Context
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.FrameLayout
 import com.example.rightpoint.omdb.R
 import kotlinx.android.synthetic.main.search_view.view.*
@@ -40,6 +42,16 @@ open class SearchView @JvmOverloads constructor(
                 onSearchInvalid()
             }
         }
+        titleField.setOnFocusChangeListener { view, b -> hideKeyboard(b) }
+    }
+
+
+    fun hideKeyboard(hide: Boolean) {
+        if(hide) {
+            return
+        }
+        val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
     }
 
 

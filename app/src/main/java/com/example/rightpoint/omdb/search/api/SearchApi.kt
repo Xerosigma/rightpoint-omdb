@@ -1,8 +1,7 @@
 package com.example.rightpoint.omdb.search.api
 
 import android.util.Log
-import com.example.rightpoint.omdb.OMDBService
-import com.example.rightpoint.omdb.shows.Search
+import com.example.rightpoint.omdb.search.models.Search
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -50,20 +49,29 @@ class SearchApi {
     var lastQuery: Query? = null
     var lastResult: Search? = null
 
-    var queryCache: HashMap<String,Search> = HashMap()
+    var queryCache: HashMap<String, Search> = HashMap()
 
 
     fun performSearch(query: String, filter: String, recipient: Recipient) {
         var currentQuery = Query(query, filter)
-        if(queryCache.containsKey(currentQuery.hashKey())) {
-            queryCache[currentQuery.hashKey()]?.let {
-                recipient.onPass(it)
-            }
+        if(presentInCache(currentQuery, recipient)) {
             return
         }
         currentQuery = handelPagination(currentQuery)
         enqueueReqest(currentQuery, filter, recipient)
         lastQuery = currentQuery
+    }
+
+
+    fun presentInCache(currentQuery: Query, recipient: Recipient): Boolean {
+        if(queryCache.containsKey(currentQuery.hashKey())) {
+            queryCache[currentQuery.hashKey()]?.let {
+                recipient.onPass(it)
+            }
+            return true
+        } else {
+            return false
+        }
     }
 
 

@@ -1,5 +1,6 @@
-package com.example.rightpoint.omdb.shows
+package com.example.rightpoint.omdb.search.models
 
+import com.example.rightpoint.omdb.shows.Show
 import java.io.Serializable
 
 /**
