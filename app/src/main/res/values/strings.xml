@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RightPoint OMDB</string>
+
+    <string name="app_intro">Search for your favorite shows!</string>
+
+    <string name="search_title">Search For Shows</string>
+    <string name="search_hint">Enter a title</string>
+    <string name="search_action">Search</string>
+    <string name="search_invalid">Please provide a valid film title.</string>
+    <string name="search_filter_announce">Please select a search filter</string>
+
+    <string name="general_loading">Loading</string>
+
+    <string name="general_error">Whoops! Let\'s try that again…</string>
+    <string name="general_error_network">Device is Offline</string>
+    <string name="general_error_empty">No Results</string>
+
+    <string name="option_movie">Movie</string>
+    <string name="option_series">Series</string>
+    <string name="option_anything">Anything</string>
+
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

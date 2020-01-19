@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/shuffleLayout"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_shuffle_black_24dp"
+        android:layout_gravity="bottom|end"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resultsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</merge>
